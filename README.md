@@ -1,5 +1,22 @@
 # netlify-redirect-bug
 
+## netlify.toml
+
+```toml
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = false
+  conditions = { Language = ["fr"] }
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
+```
+
 ## 0. Deploy
 
 Things are reinitialized on deploy so you need to deploy first.
