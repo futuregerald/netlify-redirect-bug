@@ -2,7 +2,7 @@
   ID = "5b6c8bb2-14c3-4ad7-acdc-9f0338062df0"
 
 [Build]
-  Publish = ""
+  Publish = "."
   Functions = ""
 
 [[Redirects]]
@@ -10,7 +10,6 @@
   To = "/fr/"
   Status = 302
   Force = false
-  Conditions = { Language = ["fr"] }
 
 [[Redirects]]
   From = "/"
