@@ -5,14 +5,14 @@
   Publish = "."
   Functions = ""
 
-[[Redirects]]
-  From = "/"
-  To = "/fr/"
-  Status = 302
-  Force = false
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = false
 
-[[Redirects]]
-  From = "/"
-  To = "/en/"
-  Status = 302
-  Force = false
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = false
