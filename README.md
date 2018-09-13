@@ -43,3 +43,12 @@ Redirecting to /fr/
 ```
 
 -> OK
+
+## 5. (Again) A-accept-language: fr-FR,fr
+
+```shell
+$ curl $HOST -H 'accept-language: fr-FR,fr'
+Redirecting to /en/
+```
+
+-> (STILL) NOT OK
