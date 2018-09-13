@@ -1,57 +1,45 @@
 # netlify-redirect-bug
 
-## 1. Accept-language FR
+## 0. Deploy
+
+Things are reinitialized on deploy so you need to deploy first.
 
 ```shell
-$ curl 'https://netlify-redirect-bug.netlify.com/' -H 'accept-language: fr-FR,fr'
+$ HOST='https://netlify-redirect-bug.netlify.com/'
+```
+
+## 1. Accept-language: fr-FR
+
+```shell
+$ curl $HOST -H 'accept-language: fr-FR,fr'
 Redirecting to /fr/
 ```
 
 -> OK
 
-## 2. With basic curl command
+## 2. No accept-language
 
 ```shell
-$ curl https://netlify-redirect-bug.netlify.com/
+$ curl $HOST
 Redirecting to /en/
 ```
 
 -> OK
 
-## 3. (Again) With the `accept-language` header sent by my browser
+## 3. (Again) Accept-language: fr-FR
 
 ```shell
-$ curl 'https://netlify-redirect-bug.netlify.com/' -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,la;q=0.6'
+$ curl $HOST -H 'accept-language: fr-FR,fr'
 Redirecting to /en/
 ```
 
 -> NOT OK
 
-## 4. With a custom `accept-language` header: fr-FR,fr
+## 4. Accept-language: fr
 
 ```shell
-$ curl 'https://netlify-redirect-bug.netlify.com/' -H 'accept-language: fr-FR,fr'
-Redirecting to /en/
-```
-
--> NOT OK
-
-## 5. With a custom `accept-language` header: fr-FR
-
-```shell
-$ curl 'https://netlify-redirect-bug.netlify.com/' -H 'accept-language: fr-FR'
-Redirecting to /en/
-```
-
--> NOT OK
-
-## 6. With a custom `accept-language` header: fr
-
-```shell
-$ curl 'https://netlify-redirect-bug.netlify.com/' -H 'accept-language: fr'
-Redirecting to /en/
+$ curl $HOST -H 'accept-language: fr'
+Redirecting to /fr/
 ```
 
 -> OK
-
-##
