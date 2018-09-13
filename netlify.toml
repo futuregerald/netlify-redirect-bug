@@ -10,7 +10,7 @@
   To = "/fr/"
   Status = 302
   Force = false
-  conditions = { Language = ["fr"] }
+  Conditions = { Language = ["fr"] }
 
 [[Redirects]]
   From = "/"
