@@ -8,7 +8,7 @@ Things are reinitialized on deploy so you need to deploy first.
 $ HOST='https://netlify-redirect-bug.netlify.com/'
 ```
 
-## 1. Accept-language: fr-FR
+## 1. accept-language: fr-FR,fr
 
 ```shell
 $ curl $HOST -H 'accept-language: fr-FR,fr'
@@ -26,7 +26,7 @@ Redirecting to /en/
 
 -> OK
 
-## 3. (Again) Accept-language: fr-FR
+## 3. (Again) A-accept-language: fr-FR,fr
 
 ```shell
 $ curl $HOST -H 'accept-language: fr-FR,fr'
@@ -35,7 +35,7 @@ Redirecting to /en/
 
 -> NOT OK
 
-## 4. Accept-language: fr
+## 4. accept-language: fr
 
 ```shell
 $ curl $HOST -H 'accept-language: fr'
